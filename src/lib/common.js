@@ -252,7 +252,12 @@ function introspectionArgToVariable({
 
     if (typeof arg.defaultValue === 'string') {
       if (underlyingType.kind !== 'ENUM') {
-        return JSON5.parse(arg.defaultValue)
+        try {
+          return JSON5.parse(arg.defaultValue)
+        } catch (err){
+          // todo: hotfix to support complex default values with enum values 
+          return arg.defaultValue;
+        }
       }
 
       if (!isArray) {
