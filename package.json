@@ -1,5 +1,5 @@
 {
-  "name": "spectaql",
+  "name": "@stigg/spectaql",
   "version": "1.0.4",
   "description": "A powerful library for autogenerating static GraphQL API documentation",
   "author": "Anvil Foundry Inc. <hello@useanvil.com>",
